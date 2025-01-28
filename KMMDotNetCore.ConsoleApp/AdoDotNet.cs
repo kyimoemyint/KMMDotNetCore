@@ -195,5 +195,33 @@ namespace KMMDotNetCore.ConsoleApp
             connection.Close();
             Console.WriteLine("Connection Closed...");
         }
+
+        public void Delete()
+        {
+            Console.Write("Blog Id: ");
+            string id = Console.ReadLine();
+
+            SqlConnection connection = new SqlConnection(_connectionString);
+            Console.WriteLine("Connection Opening...");
+            connection.Open();
+            Console.WriteLine("Connection Opened...");
+
+            string query = $@"UPDATE [dbo].[Tbl_Blog]
+            SET [DeleteFlag] = @DeleteFlag
+          WHERE [BlogId] = @BlogId";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@DeleteFlag", 1);
+            cmd.Parameters.AddWithValue("@BlogId", id);
+
+            int result = cmd.ExecuteNonQuery();
+
+            string value = result == 1 ? "Successfully Deleted" : "Fail to Delete";
+            Console.WriteLine(value);
+
+            Console.WriteLine("Connection Closing...");
+            connection.Close();
+            Console.WriteLine("Connection Closed...");
+        }
     }
 }
