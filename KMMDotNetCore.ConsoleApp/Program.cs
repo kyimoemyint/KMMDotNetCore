@@ -15,6 +15,6 @@ AdoDotNet adoDotNet = new AdoDotNet();
 //adoDotNet.Read();
 //adoDotNet.Create();
 //adoDotNet.Edit();
-adoDotNet.Delete();
+adoDotNet.Update();
 
 Console.ReadLine();

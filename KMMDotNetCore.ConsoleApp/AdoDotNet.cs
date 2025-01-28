@@ -153,5 +153,47 @@ namespace KMMDotNetCore.ConsoleApp
             Console.WriteLine(dr["BlogAuthor"]);
             Console.WriteLine(dr["BlogContent"]);
         }
+
+        public void Update()
+        {
+            Console.Write("Blog Id: ");
+            string id = Console.ReadLine();
+
+            Console.Write("Blog Title: ");
+            string title = Console.ReadLine();
+
+            Console.Write("Blog Author: ");
+            string author = Console.ReadLine();
+
+            Console.Write("Blog Content: ");
+            string content = Console.ReadLine();
+
+            SqlConnection connection = new SqlConnection(_connectionString);
+            Console.WriteLine("Connection Opening...");
+            connection.Open();
+            Console.WriteLine("Connection Opened...");
+
+            string query = $@"UPDATE [dbo].[Tbl_Blog]
+                   SET [BlogTitle] = @BlogTitle
+                      ,[BlogAuthor] = @BlogAuthor
+                      ,[BlogContent] = @BlogContent
+                      ,[DeleteFlag] = 0
+                 WHERE [BlogId] = @BlogId";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogTitle", title);
+            cmd.Parameters.AddWithValue("@BlogAuthor", author);
+            cmd.Parameters.AddWithValue("@BlogContent", content);
+            cmd.Parameters.AddWithValue("@BlogId", id);
+
+            int result = cmd.ExecuteNonQuery();
+
+            string value = result == 1 ? "Saving Successful." : "Saving Failed";
+            Console.WriteLine(value);
+
+            Console.WriteLine("Connection Closing...");
+            connection.Close();
+            Console.WriteLine("Connection Closed...");
+        }
     }
 }
