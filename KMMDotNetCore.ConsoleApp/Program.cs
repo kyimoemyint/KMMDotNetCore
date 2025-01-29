@@ -18,10 +18,15 @@ Console.WriteLine("Hello, World!");
 //adoDotNet.Update();
 //adoDotNet.Delete();
 
-DapperExample dapperExample = new DapperExample();
+//DapperExample dapperExample = new DapperExample();
 //dapperExample.Read();
 //dapperExample.Create("asdfasdf", "asdfasdfief", "aljljhopjlj");
 //dapperExample.Edit(1);
 //dapperExample.Edit(5);
 
+EFCoreExample eFCoreExample = new EFCoreExample();
+//eFCoreExample.Read();
+//eFCoreExample.Create("earth", "jack sparrow", "sailing");
+//eFCoreExample.Update(5, "iii", "iiiii", "abababab");
+//eFCoreExample.Delete(5);
 Console.ReadLine();
