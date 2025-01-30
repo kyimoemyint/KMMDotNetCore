@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -113,6 +114,40 @@ namespace KMMDotNetCore.ConsoleApp
                 });
 
                 Console.WriteLine(result == 1 ? "Update Successful." : "Update Failed.");
+            }
+        }
+
+        public void Delete(int id)
+        {
+            //virtual delete
+            //using(IDbConnection db = new SqlConnection(_connectionString))
+            //{
+            //    string query = $@"UPDATE [dbo].[Tbl_Blog]
+            //        SET [DeleteFlag] = @DeleteFlag
+            //      WHERE [BlogId] = @BlogId";
+
+            //    var result = db.Execute(query, new BlogDapperDataModel
+            //    {
+            //        DeleteFlag = true,
+            //        BlogId = id
+            //    });
+
+            //    Console.WriteLine(result == 1 ? "Deleting Successful." : "Deleting Failed.");
+            //}
+
+            //permanent delete
+            using (IDbConnection db = new SqlConnection(_connectionString))
+            {
+                string query = $@"DELETE FROM [dbo].[Tbl_Blog]
+                        WHERE [BlogId] = @BlogId";
+
+                var result = db.Execute(query, new BlogDapperDataModel
+                {
+                    DeleteFlag = true,
+                    BlogId = id
+                });
+
+                Console.WriteLine(result == 1 ? "Deleting Successful." : "Deleting Failed.");
             }
         }
     }

@@ -24,6 +24,7 @@ DapperExample dapperExample = new DapperExample();
 //dapperExample.Edit(1);
 //dapperExample.Edit(5);
 //dapperExample.Update(3, "apple", "kmm", "some apple");
+dapperExample.Delete(4);
 
 //EFCoreExample eFCoreExample = new EFCoreExample();
 //eFCoreExample.Read();
