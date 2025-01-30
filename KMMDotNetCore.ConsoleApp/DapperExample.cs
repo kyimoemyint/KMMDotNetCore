@@ -92,5 +92,28 @@ namespace KMMDotNetCore.ConsoleApp
 
             }
         }
+
+        public void Update(int id, string title, string author, string content)
+        {
+            using (IDbConnection db = new SqlConnection(_connectionString))
+            {
+                string query = $@"UPDATE [dbo].[Tbl_Blog]
+                   SET [BlogTitle] = @BlogTitle
+                      ,[BlogAuthor] = @BlogAuthor
+                      ,[BlogContent] = @BlogContent
+                      ,[DeleteFlag] = 0
+                 WHERE [BlogId] = @BlogId";
+
+                var result = db.Execute(query, new BlogDapperDataModel
+                {
+                    BlogTitle = title,
+                    BlogAuthor = author,
+                    BlogContent = content,
+                    BlogId = id
+                });
+
+                Console.WriteLine(result == 1 ? "Update Successful." : "Update Failed.");
+            }
+        }
     }
 }
