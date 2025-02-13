@@ -17,3 +17,5 @@ Blazor Web Sever
 .NET 
 
 UI + Business Login + Data Access => Database
+
+dotnet ef dbcontext scaffold "Server=.;Database=DotNetTrainingBatch5;User Id=sa;Password=kmm@123;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models -c AppDbContext -f

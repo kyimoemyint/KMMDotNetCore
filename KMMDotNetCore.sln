@@ -3,12 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMMDotNetCore.ConsoleApp", "KMMDotNetCore.ConsoleApp\KMMDotNetCore.ConsoleApp.csproj", "{5635511A-A474-42FC-9D95-F59392E9182F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KMMDotNetCore.ConsoleApp", "KMMDotNetCore.ConsoleApp\KMMDotNetCore.ConsoleApp.csproj", "{5635511A-A474-42FC-9D95-F59392E9182F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{B4529270-CF96-4722-B9DA-02D682365FBE}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMMDotNetCore.Database", "KMMDotNetCore.Database\KMMDotNetCore.Database.csproj", "{50F23603-3514-45ED-A479-8323D5F193F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMMDotNetCore.ConsoleApp2", "KMMDotNetCore.ConsoleApp2\KMMDotNetCore.ConsoleApp2.csproj", "{929EB283-7306-47BA-876C-93AD46A46575}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +24,14 @@ Global
 		{5635511A-A474-42FC-9D95-F59392E9182F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5635511A-A474-42FC-9D95-F59392E9182F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5635511A-A474-42FC-9D95-F59392E9182F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50F23603-3514-45ED-A479-8323D5F193F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F23603-3514-45ED-A479-8323D5F193F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F23603-3514-45ED-A479-8323D5F193F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F23603-3514-45ED-A479-8323D5F193F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929EB283-7306-47BA-876C-93AD46A46575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929EB283-7306-47BA-876C-93AD46A46575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929EB283-7306-47BA-876C-93AD46A46575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929EB283-7306-47BA-876C-93AD46A46575}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
