@@ -10,9 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMMDotNetCore.Database", "KMMDotNetCore.Database\KMMDotNetCore.Database.csproj", "{50F23603-3514-45ED-A479-8323D5F193F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KMMDotNetCore.Database", "KMMDotNetCore.Database\KMMDotNetCore.Database.csproj", "{50F23603-3514-45ED-A479-8323D5F193F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMMDotNetCore.ConsoleApp2", "KMMDotNetCore.ConsoleApp2\KMMDotNetCore.ConsoleApp2.csproj", "{929EB283-7306-47BA-876C-93AD46A46575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KMMDotNetCore.ConsoleApp2", "KMMDotNetCore.ConsoleApp2\KMMDotNetCore.ConsoleApp2.csproj", "{929EB283-7306-47BA-876C-93AD46A46575}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMMDotNetCore.RestApi", "KMMDotNetCore.RestApi\KMMDotNetCore.RestApi.csproj", "{F0C5B5F9-D603-48D7-9DFC-821288D867D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{929EB283-7306-47BA-876C-93AD46A46575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{929EB283-7306-47BA-876C-93AD46A46575}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{929EB283-7306-47BA-876C-93AD46A46575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0C5B5F9-D603-48D7-9DFC-821288D867D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0C5B5F9-D603-48D7-9DFC-821288D867D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0C5B5F9-D603-48D7-9DFC-821288D867D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0C5B5F9-D603-48D7-9DFC-821288D867D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

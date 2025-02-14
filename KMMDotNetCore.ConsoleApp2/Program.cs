@@ -5,3 +5,4 @@ Console.WriteLine("Hello, World!");
 
 AppDbContext db = new AppDbContext();
 var lst = db.TblBlogs.ToList();
+Console.WriteLine("finish");
